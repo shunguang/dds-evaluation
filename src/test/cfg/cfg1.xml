@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg>
+    <cams>
+        <id>0</id>
+        <name>Main Camera</name>
+        <rtspUrl></rtspUrl> <!-- Real time streaming protocol URL -->
+        <valid>1</valid> <!-- 0 false, 1 true-->
+        <imgW>960</imgW> <!-- Image Width -->
+        <imgH>630</imgH> <!-- Image Height -->
+        <fpsNum>1</fpsNum> <!-- frames per second numerator -->
+        <fpsDen>1</fpsDen> <!-- frames per second denominator -->
+
+        <!-- a single hertz is one event per second-->
+        <frequencyStart>10</frequencyStart> <!-- minimum hertz -->
+        <frequencyStep>5</frequencyStep> <!-- interval to step by -->
+        <frequencyEnd>100</frequencyEnd> <!-- maximum hertz-->
+
+        <numSamples>1000</numSamples> <!-- each frequency takes x samples before moving to the next one -->
+
+        <frmQueSz>10</frmQueSz>
+        <!-- currently not used configurations -->
+        <detPyrLev>1</detPyrLev>
+        <detMethodId>0</detMethodId>
+        <detNetworkId>0</detNetworkId>
+        <detFrmsToSkip>2</detFrmsToSkip>
+        <mp4LocationAndPrefix>record</mp4LocationAndPrefix>
+    </cams>
+    
+    <pubImg>
+        <topicName>ImageTopic2</topicName>
+        <typeName>MsgImg</typeName>
+        <pqosName>ImgPub</pqosName>
+    	<imgSrcType>0</imgSrcType>
+        <imgUrl>/home/maven/dataset/opticalFlow/sparse/people2.mp4</imgUrl>
+        <!-- image will be resized to the floowing size to pub-->
+	    <imgW>1280</imgW>
+	    <imgH>720</imgH>
+	    <fps>
+	        <num>30</num>
+	        <den>1</den>
+        </fps>
+
+        <!-- nTotFrames=0 inf # of frames will be send out, >0 certain # of frames sent out  </nTotFrames-->
+        <nTotFrames>0</nTotFrames>
+    </pubImg>
+
+    <subImg>
+        <topicName>ImageTopic2</topicName>
+        <typeName>MsgImg</typeName>
+        <pqosName>ImgSub</pqosName>
+        <!-- if dispWindowName="NO" no display-->
+        <!--dispWindowName>ImgSub2</dispWindowName-->
+        <dispWindowName>NULL</dispWindowName>
+    </subImg>
+
+    <log>
+        <appRootFolder>xZone</appRootFolder>
+        <logFolder>.</logFolder>
+        <isDumpLog>1</isDumpLog> <!-- 0 false, 1 true-->
+        <isShowLogInConsole>1</isShowLogInConsole> <!-- 0 false, 1 true-->
+        <frameFreqsToLog>0</frameFreqsToLog>
+    </log>
+
+</cfg>

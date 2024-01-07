@@ -1,0 +1,25 @@
+/** 
+	long is int32_t
+	long long is int64_t
+	sequence<octet> is vector<uint8_t>
+**/
+
+struct MsgImg
+{
+	/** imaage width and height **/
+	long width;
+	long height;
+
+	/** frame number and time info **/
+	/** unsigned long long is uint64_t **/
+	unsigned long long frmNum;
+	unsigned long long timeAcq_us;
+	unsigned long long timeTx_us;
+	unsigned long long timeRx_us;
+
+	/** image encoder type and data **/
+	char          encType; 		/** 0-num encoder, 1-jpg, 2-png,.... **/
+	unsigned long cap;  		/** capacity **/
+	unsigned long size;			/** size **/
+    sequence<octet>  data;  	/** data **/
+};

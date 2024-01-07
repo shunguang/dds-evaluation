@@ -1,0 +1,54 @@
+# folder
+
+build-vs2019-x64/
+build/
+ref/
+x64/
+pkg/
+data/
+.vscode/
+
+# files
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.bak
+*.pdf
+*.MOV
+*.png
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# VS files
+*.vs
+*.db
+*.suo
+*.ipch
+*.db*
+

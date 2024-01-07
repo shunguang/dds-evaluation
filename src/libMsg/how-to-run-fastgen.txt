@@ -1,0 +1,37 @@
+ref: 
+[1] https://fast-dds.docs.eprosima.com/en/latest/fastdds/dds_layer/topic/fastddsgen/fastddsgen.html
+[2] https://github.com/eProsima/Fast-DDS-Gen/issues/59
+
+1. Windows
+	assume your working dir is:
+	WDIR=C:\Users\wus1\Projects\swu-personal\xZone\src\libMsg>
+
+	$(WDIR)>C:\pkg\fastDDS\v2.9.1\bin\fastddsgen.bat -ppDisable .\idl\MsgTmp.idl
+
+	output files:
+
+	MsgTmp.cxx/.h: Type definition.
+	MsgTmpPubSubType.cxx/.h: Serialization and deserialization source code for the data type. 
+                         It also defines the getKey() member function of the MyTypePubSubType 
+						 class in case the topic implements keys (see Data types with a key).
+						 
+linux:
+	a) run
+		<path/to/Fast DDS-Gen>/scripts/fastddsgen ./idl/MsgTmp.idl
+		ex: /home/maven/pkg/Fast-DDS/Fast-DDS-Gen/scripts/fastddsgen ./idl/MsgTmp.idl
+	b) output:	
+		MsgTmp.cxx: MsgTmp type definition.
+		MsgTmp.h: Header file for MsgTmp.cxx.
+		MsgTmpPubSubTypes.cxx: Serialization and Deserialization code for the MsgTmp type.
+		MsgTmpPubSubTypes.h: Header file for MsgTmpPubSubTypes.cxx.
+
+
+----from  https://github.com/eProsima/Fast-DDS-Gen/issues/59 -----------
+@gmihi You can do several things here:
+
+1. Running fastddsgen from a VS command prompt. This way the preprocessor will be on the path.
+
+2. You can pass the path to the preprocessor using argument -ppPath when invoking fastddsgen
+
+3. As you are building HelloWorld.idl, which does not require the preprocessor (as it has no #include), 
+   you could use argument -ppDisable when invoking fastddsgen		

@@ -1,0 +1,4 @@
+----start----
+test1,i=10, F=C:\Users\wus1\Projects\swu-personal\xZone\src\test\test_main.cpp, L=13
+xyz=2,efg=quit, F=C:\Users\wus1\Projects\swu-personal\xZone\src\test\test_main.cpp, L=15
+-------Last log Msg : log thread prepare to exit -----
