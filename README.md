@@ -43,3 +43,7 @@ We assume DDS_EVAL is the check out folder of this project.
 	   2) cd $(DDS_EVAL)/src/makeFiles execute 
 	      ./run_all_w_cleanAll.sh 
 	   	  (you may need to to edit Makefile_app_header.mak if there is any errors)	  
+
+## Results
+see screen shot in folder doc/
+ 

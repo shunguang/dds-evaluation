@@ -19,7 +19,7 @@ data/
 *.bak
 *.pdf
 *.MOV
-*.png
+
 
 # Precompiled Headers
 *.gch
