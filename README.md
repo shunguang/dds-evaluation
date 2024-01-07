@@ -1,15 +1,18 @@
-# DDS performance evaluation 
-This version comes from the original one at https://github.com/shunguang/xZone.git
+# Build DDS performance evaluation 
+(01/06/2014)
 
-(08/16/2013)
-
-## PGK and SRC dir
+## PGK folder
 	(a) for windows
-		PKG=c:\pkg
-		XZONE_SRC=C:\Users\wus1\Projects\xZone\src
+		PKG=c:/pkg
 	(b) for linux
-		PKG=~\pkg
-		XZONE_SRC=~\xZone\src
+		PKG=~/pkg
+		
+## DDS_EVAL folder
+We assume DDS_EVAL is the check out folder of this project.
+	(a) for windows
+		DDS_EVAL=C:/Users/wus1/Projects/dds-evaluation/
+	(b) for linux
+		DDS_EVAL=~/dds-evaluation/src
 	
 ## Dependency
     a) gtest
@@ -30,12 +33,12 @@ This version comes from the original one at https://github.com/shunguang/xZone.g
 	
 ## How to build 
 	a) for windows (vsiual studio 2019 and uper)
-	   1) copy $(XZONE_SRC)/vs2019/open_xZone_vs2019_template.bat to $(XZONE_SRC)/vs2019/open_xZone_vs2019_xyz.bat
-	   2) edit  $(XZONE_SRC)/vs2019/open_xZone_vs2019_xyz.bat to make sure the path is corresponding to your envrionment
-	   3) double click $(XZONE_SRC)/vs2019/open_xZone_vs2019_xyz.bat
+	   1) copy $(DDS_EVAL)/src/vs2019/open_xZone_vs2019_template.bat to $(DDS_EVAL)/src/vs2019/open_xZone_vs2019_xyz.bat
+	   2) edit  $(DDS_EVAL)/src/vs2019/open_xZone_vs2019_xyz.bat to make sure the path is corresponding to your envrionment
+	   3) double click $(DDS_EVAL)/src/vs2019/open_xZone_vs2019_xyz.bat
 	   
 	b) for linux
-	   1) set enviornment varaiables PKG and XZONE_SRC 
-	   2) cd $(XZONE_SRC)/makeFiles execute 
+	   1) set enviornment varaiables PKG and DDS_EVAL_SRC 
+	   2) cd $(DDS_EVAL)/src/makeFiles execute 
 	      ./run_all_w_cleanAll.sh 
 	   	  (you may need to to edit Makefile_app_header.mak if there is any errors)	  
